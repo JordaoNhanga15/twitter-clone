@@ -1,0 +1,115 @@
+:root{
+    --background-i:#000c14;
+    --background:rgb(21, 32, 43);
+    --color-span:rgb(136, 153, 166);
+    --button:rgb(29, 161, 242);
+    --back-i:rgba(0,0,0,1);
+  }
+  .ls{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.ls .la{
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.first{
+    display: none;
+}
+.ls .label_toggle{
+    display: none;
+    text-indent: -9999px;
+    cursor: pointer;
+    width: 52px;
+    height: 27px;
+    background: gray;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+.ls .label_toggle::after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 90px;
+    transition: .1s;
+}
+.ls input[type="checkbox"]:checked + .la{
+    background: violet;
+}
+/* .ls input[type="checkbox"]:checked + label::after{
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+} */
+/* .ls label:active:after{
+    width: 45px;
+} */
+header.header-container{
+      box-shadow:0px 0px 5px rgba(0,0,0,9);
+      position: fixed;
+      right: 0;
+      width: 100%;
+      z-index: 122222;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--background);
+      padding: 15px 15px;
+}
+header.header-container .header-lado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+header.header-container .header-lado .header-lado-a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header.header-container .header-lado .header-lado-a img{
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+header.header-container .header-lado .header-lado-a span{
+    font-size: 17px;
+    color: var(--color-span);
+    font-weight: 700;
+}
+
+/*  */
+
+header.header-container .header-d{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header.header-container .header-d .input-container{
+    display: flex;
+    background: var(--background-i);
+    transform: translateX(20%);
+    border-radius: 50px;
+    gap: 10px;
+    align-items: center;
+    width: 40%;
+    padding:5px 10px;
+    color: var(--color-span);
+}
+header.header-container .header-d .input-container input{
+    outline: none;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 10px 5px;
+    color: #fff;
+}

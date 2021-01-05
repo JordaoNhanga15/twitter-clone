@@ -1,0 +1,79 @@
+:root{
+    --color-small:#fff;
+    --color-svg:rgb(136, 153, 166);
+    --background-button: rgb(29, 161, 242);
+    --background-butHover:rgb(23,129,194);
+}
+.icone-logo{
+    margin: 20px 20px;
+}
+nav.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 72727372;
+}
+nav.menu ul{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap: 5px;
+    list-style-type: none;
+}
+nav.menu ul li a span{
+    margin-right: 20px;
+}
+nav.menu ul li a{
+    text-align: left;
+    font-size: 17px;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-transform: capitalize;
+    position: relative;
+    align-self: stretch;
+    padding: 10px 20px;
+    color: var(--color-small);
+}
+nav.menu ul li a svg{
+    fill: var(--color-svg);
+}
+nav.menu ul li .active::after{
+    height: 100%;
+}
+nav.menu ul li a::after{
+    transition:  .5s ease-in-out;
+    content: '';
+    position: absolute;
+    transition: 1s ease;
+    right: 0;
+    height: 00%;
+    width: 2px;
+    background: var(--background-button);
+}
+nav.menu .button{
+    margin-top: 40px;
+    padding: 0px 10px;
+    display: flex;
+    text-align: center;
+}
+nav.menu .button input{
+    outline: none;
+    border: 0;
+    background: var(--background-button);
+    color: var(--color-text);
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    font-size: 18px;
+    text-transform: capitalize;
+    width: 100%;
+    border-radius: 30px;
+    transition: background .4s ease-in-out;
+}
+nav.menu .button input:hover{
+    background:var(--background-butHover) ;
+}

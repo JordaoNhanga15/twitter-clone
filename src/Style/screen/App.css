@@ -1,0 +1,59 @@
+:root{
+  --backGround-d:#282c34;
+  --background:rgb(21, 32, 43);
+  --button:rgb(29, 161, 242);
+  --back-i:rgba(0,0,0,0);
+}
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+main.container{
+  position: relative;
+  background: var(--background);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: 
+  "A B"
+  "A B"
+  "A B"
+  ;
+}
+
+*::-webkit-scrollbar{
+  width: .6rem;
+}
+*::-webkit-scrollbar-track{
+  background: #333;
+}
+*::-webkit-scrollbar-thumb{
+  background: linear-gradient(to top,#909fad,#094e86);
+  border-radius: 10px;;
+}
+@font-face{
+  src:url('../../style/components/Roboto/Roboto-Light.ttf');
+  font-family:'Lato'
+}
+body{
+  /* background: #e2eafc; */
+  font-family: 'Lato';
+}
+aside.A{
+  background: var(--background);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 666222;
+  width: 270px;
+  grid-area: A;
+  box-shadow:0px 3px 17px rgba(0,0,0,9);
+}
+aside.B{
+  z-index: 0;
+  position: relative;
+  grid-area: B;
+  min-height: 100vh;
+}
+
